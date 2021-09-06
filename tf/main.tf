@@ -10,7 +10,7 @@ provider "azurerm" {
 terraform {
     backend "azurerm" {
         resource_group_name = "DEV_RG"
-        storage_account_name = "strvdev"
+        storage_account_name = "strvdev01"
         container_name = "dev"
         key = "mainfile1.tfstate"
     }
