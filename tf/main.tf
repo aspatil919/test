@@ -38,12 +38,14 @@ source = "./TF/modules/StorageContainer"
 }
 
 module "m_data_factory"{
+    source = "./TF/modules/DataFactory"
 var_data_factoryname = var.var_data_factoryname
 var_location = var.var_location
 #resource_group_name = azurerm_resource_group.RG.name
 }
 
 module  "m_data_lake" {
+    source = "./TF/modules/DataLake"
 var_data_lakename = var.var_data_lakename
 # resource_group_name =azurerm_resource_group.RG.name
 location = var.var_location
