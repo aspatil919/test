@@ -18,7 +18,7 @@ terraform {
 
 
 module "Resourcegroup" {
- source = "./tf/module/Resourcegroup"
+ source = "tf/module/Resourcegroup"
  var_location = var.var_location
  var_RG_name = var.var_RG_name
 }
