@@ -18,37 +18,37 @@ terraform {
 
 
 module "m_resource_group" {
- source = "./tf/modules/Resourcegroup"
+ source = "./tf/module/Resourcegroup"
  var_location = var.var_location
  var_RG_name = var.var_RG_name
 }
 
-module "m_storage_account" {
- source = "./tf/modules/Storageaccount"
-var_location = var.var_location
-var_storage_name = var.var_Storage_name
-var_account_tier = var.var_account_tier
-var_account_replication_type = var.var_account_replication_type  
-}
+#module "m_storage_account" {
+ #source = "./tf/modules/Storageaccount"
+#var_location = var.var_location
+#var_storage_name = var.var_Storage_name
+#var_account_tier = var.var_account_tier
+#var_account_replication_type = var.var_account_replication_type  
+#}
 
-module "m_storage_container" {
-source = "./tf/modules/StorageContainer"
-  var_storage_containername = var.var_storage_containername
-  container_access_type = "private"
-}
+#module "m_storage_container" {
+#source = "./tf/modules/StorageContainer"
+ # var_storage_containername = var.var_storage_containername
+  #container_access_type = "private"
+#}
 
-module "m_data_factory"{
-    source = "./tf/modules/DataFactory"
-var_data_factoryname = var.var_data_factoryname
-var_location = var.var_location
+#module "m_data_factory"{
+ #   source = "./tf/modules/DataFactory"
+#var_data_factoryname = var.var_data_factoryname
+#var_location = var.var_location
 #resource_group_name = azurerm_resource_group.RG.name
-}
+#}
 
-module  "m_data_lake" {
-    source = "./tf/modules/DataLake"
-var_data_lakename = var.var_data_lakename
+#module  "m_data_lake" {
+  #  source = "./tf/modules/DataLake"
+#var_data_lakename = var.var_data_lakename
 # resource_group_name =azurerm_resource_group.RG.name
-location = var.var_location
+#location = var.var_location
 
-}
+#}
 
